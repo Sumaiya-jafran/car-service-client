@@ -5,10 +5,12 @@ const Header = () => {
     <>
       <nav className=" flex gap-8">
         <NavLink
-          className="text-md font-bold px-3 py-1 rounded-md  hover:bg-violet-600 active:bg-violet-700"
+          className="text-md font-bold px-3 py-1 rounded-md  hover:bg-violet-600 active:bg-violet-700  "
           to="/"
+          
           end
         >
+          
           Home
         </NavLink>
         <NavLink
