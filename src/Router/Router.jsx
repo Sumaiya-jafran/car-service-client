@@ -1,8 +1,9 @@
 import {
-    createBrowserRouter
+  createBrowserRouter
 } from "react-router-dom";
-import Main from "../Components/Layout/Main";
+import CheckOut from "../Components/CheckOut";
 import Home from "../Components/HomePage/Home";
+import Main from "../Components/Layout/Main";
 import SignIn from "../Components/SignIn";
 import Signup from "../Components/Signup";
 
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
         {
          path:'/signup',
          element: <Signup></Signup>
+      },
+      {
+        path:'/checkout/:id',
+        element:<CheckOut></CheckOut>,
+        loader:({params})=>fetch(`http://localhost:5000/items/${params.id}`)
       }
        
       ]

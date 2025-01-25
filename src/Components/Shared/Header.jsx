@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router";
+import  { AuthContext } from "../../Providers/AuthProvider";
 const Header = () => {
+
+  const {user,logOut}=useContext(AuthContext);
+ 
+
+  const handleSignOut=()=>{
+     logOut()
+     .then(()=>console.log('user logged out'))
+      .catch(error=>console.log(error))
+  }
+
+
   const navItems = (
     <>
       <nav className=" flex gap-8">
@@ -26,6 +38,7 @@ const Header = () => {
         >
           SignUp
         </NavLink>
+        
       </nav>
     </>
   );
@@ -62,8 +75,14 @@ const Header = () => {
         <ul className="menu menu-horizontal   px-1">{navItems}</ul>
       </div>
       <div className="navbar-end">
+      <button onClick={handleSignOut} className="mr-5 btn btn-sm btn-outline btn-success ">SignOut</button>
       <button className="btn btn-outline btn-success">Book Apponintment</button>
-        
+        <NavLink
+          className="text-md font-bold px-3 py-1 rounded-md  hover:bg-violet-600 active:bg-violet-700"
+           
+        >
+          
+        </NavLink>
       </div>
     </div>
   );
