@@ -6,6 +6,7 @@ import Home from "../Components/HomePage/Home";
 import Main from "../Components/Layout/Main";
 import SignIn from "../Components/SignIn";
 import Signup from "../Components/Signup";
+import MenuPage from "../Components/Menu/MenuPage";
 
 const router = createBrowserRouter([
     {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
         {
          path:'/',
          element: <Home></Home>
+      },
+      {
+        path:'/menu',
+        element:<MenuPage></MenuPage>
       },
         {
          path:'/signin',

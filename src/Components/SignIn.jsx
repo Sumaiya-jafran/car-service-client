@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import loginImg from '../assets/images/login/login.svg'
+// import loginImg from '../assets/images/login/login.svg'
 import { AuthContext } from "../Providers/AuthProvider";
 import { Link } from "react-router-dom";
 const SignIn = () => {
@@ -26,7 +26,7 @@ const SignIn = () => {
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row gap-12">
         <div className="text-center lg:text-left">
-            <img src={loginImg} alt=""/>
+            {/* <img src={loginImg} alt=""/> */}
           
         </div>
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">

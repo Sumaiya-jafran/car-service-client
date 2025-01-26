@@ -26,6 +26,15 @@ const Header = () => {
           Home
         </NavLink>
         <NavLink
+          className="text-md font-bold px-3 py-1 rounded-md  hover:bg-violet-600 active:bg-violet-700  "
+          to="/menu"
+          
+          end
+        >
+          
+          Our Menu
+        </NavLink>
+        <NavLink
           className="text-md font-bold px-3 py-1 rounded-md  hover:bg-violet-600 active:bg-violet-700"
           to="/signin"
           end
